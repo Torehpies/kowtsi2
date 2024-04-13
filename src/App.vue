@@ -1,12 +1,18 @@
 <script setup>
-    import { ref } from 'vue'
-    const activeColor = ref('red')
+  import { ref } from 'vue'           
+
+  const brown= ref('#ce7d50')
 </script>
 
 <template>
-<h1 >hi </h1>
+  <div class=full-screen-div :style="{ backgroundColor: brown }">
+
+  </div>
 </template>
-
+  
 <style scoped>
-
+  .full-screen-div{
+    width: 100vw;
+    height: 100vh;
+  }
 </style>
