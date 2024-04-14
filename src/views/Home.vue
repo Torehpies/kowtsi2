@@ -1,13 +1,9 @@
 <template>
   <div>
-    <p> home to gage </p>
+    <p>home to gage</p>
   </div>
 </template>
 
-<script setup>
+<script setup></script>
 
-</script>
-
-<style scoped>
-
-</style>
+<style scoped></style>
