@@ -1,9 +1,10 @@
-#app{
+#app {
   width: 100vw;
   height: 100vh;
-  background-color: #C87D50;
+  background-color: #c87d50;
 }
 
-h1, p{
+h1,
+p {
   margin: 0;
 }
