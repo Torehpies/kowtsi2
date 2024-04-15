@@ -1,6 +1,6 @@
 <template>
-  <div>
-
+  <div id= "div1">
+    <label>wew</label>
   </div>
 </template>
 
@@ -8,6 +8,11 @@
 
 </script>
 
-<style lang="scss" scoped>
-
+<style scoped>
+  #div1{
+      height: 100px;
+      width: 100px;
+      background-color: #FFF7E4;
+  }
 </style>
+
