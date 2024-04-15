@@ -33,7 +33,7 @@ export default {
   border-radius: 50px;
   background-color: #e5e9ea;
   position: relative;
-  bottom: 7px;
+  bottom: 0px;
 }
 
 .knob {
@@ -43,14 +43,14 @@ export default {
   width: 37px;
   height: 37px;
   border-radius: 50%;
-  background-color: #fbd4e6;
+  background-color: #e695bb;
   box-shadow: 0 0 0 2px #f470a7;
   transition: transform 0.3s ease;
 }
 
 .checkbox-input:checked + .checkbox-label .knob {
   transform: translateX(60px);
-  background-color: #e2ecf4;
-  box-shadow: 0 0 0 2px #a1c6dd;
+  background-color: #72b3e7;
+  box-shadow: 0 0 0 2px #5088ab;
 }
 </style>
