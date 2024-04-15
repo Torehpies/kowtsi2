@@ -29,5 +29,4 @@ import Checked from "./Checked.vue";
 </template>
 
 <style scoped>
-@import "@/assets/signUp.css";
 </style>
