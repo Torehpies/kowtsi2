@@ -1,16 +1,14 @@
 <template>
-  <div id= "div1">
-    <label>wew</label>
+
+  <div class = "grid grid-cols-4 grid-rows-4 size-full">
+
+   <Profilebackground/>
+   <ProfileFeed/>
+   
   </div>
 </template>
 
-<script setup></script>
-
-<style scoped>
-  #div1{
-      height: 100px;
-      width: 100px;
-      background-color: #FFF7E4;
-  }
-</style>
-
+<script setup>
+import Profilebackground from '@/components/profile/Profilebackground.vue'
+import ProfileFeed from '@/components/profile/ProfileFeed.vue'
+</script>
