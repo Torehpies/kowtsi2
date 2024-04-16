@@ -1,0 +1,79 @@
+/* dagdagaawn */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+* {
+  font-family: "Quicksand";
+  color: white;
+  font-size: large;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 90vw;
+}
+
+.contents {
+  background-color: #071630; /* Dark background for the form container */
+  padding: 30px;
+  border-radius: 50px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  opacity: 0.8;
+}
+
+h1 {
+  height: 5vh;
+  font-size: 30px;
+}
+
+img {
+  margin: 0;
+  width: auto;
+  height: 10vh;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column; /* Stack form items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+button {
+  width: 100%; /* Make inputs and button full-width */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Include padding and border in width calculation */
+  color: black;
+}
+
+button {
+  margin: 0;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  top: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.input-container {
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+.label-container {
+  margin-bottom: 10px; /* Add margin to the bottom of label container */
+}
