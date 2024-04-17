@@ -3,6 +3,7 @@ import Home from "@/views/Home.vue";
 import Login from "@/views/Login.vue";
 import Index from "@/views/Index.vue";
 import Profile from "@/views/Profile.vue";
+import SignUpForm from "@/views/SignUpForm.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,6 +27,11 @@ const router = createRouter({
       path: "/profile",
       name: "Kowtsi | Profile",
       component: () => import("../views/Profile.vue"),
+    },
+    {
+      path: "/signIn",
+      name: "Kowtsi | SignUp",
+      component: () => import("../views/SignUpForm.vue"),
     },
   ],
 });
