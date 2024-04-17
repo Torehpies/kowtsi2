@@ -3,60 +3,16 @@
     <h2 class="text-2xl font-bold mb-4 text-center">Register</h2>
 
     <form @submit.prevent="submitForm">
-      <!-- First Name -->
+      <!-- Email -->
       <div class="mb-4">
-        <label for="first_name" class="block text-sm font-medium text-white"
-          >First Name</label
+        <label for="email" class="block text-sm font-medium text-white"
+          >email</label
         >
         <input
-          v-model="formData.firstName"
+          v-model="formData.email"
           type="text"
-          id="first_name"
-          name="first_name"
-          class="mt-1 p-2 border border-black rounded-md w-full text-black"
-          required
-        />
-      </div>
-
-      <!-- Middle Name -->
-      <div class="mb-4">
-        <label for="middle_name" class="block text-sm font-medium text-white"
-          >Middle Name</label
-        >
-        <input
-          v-model="formData.middleName"
-          type="text"
-          id="middle_name"
-          name="middle_name"
-          class="mt-1 p-2 border border-black rounded-md w-full text-black"
-        />
-      </div>
-
-      <!-- Last Name -->
-      <div class="mb-4">
-        <label for="last_name" class="block text-sm font-medium text-white"
-          >Last Name</label
-        >
-        <input
-          v-model="formData.lastName"
-          type="text"
-          id="last_name"
-          name="last_name"
-          class="mt-1 p-2 border border-black rounded-md w-full text-black"
-          required
-        />
-      </div>
-
-      <!-- Username -->
-      <div class="mb-4">
-        <label for="username" class="block text-sm font-medium text-white"
-          >Username</label
-        >
-        <input
-          v-model="formData.username"
-          type="text"
-          id="username"
-          name="username"
+          id="email"
+          name="email"
           class="mt-1 p-2 border border-black rounded-md w-full text-black"
           required
         />
@@ -94,20 +50,6 @@
         />
       </div>
 
-      <!-- Gender -->
-      <div class="mb-4">
-        <label class="block text-sm font-medium text-white">Gender</label>
-        <select
-          v-model="formData.gender"
-          class="mt-1 p-2 border border-black rounded-md w-full text-black"
-          required
-        >
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-          <option value="other">Other</option>
-        </select>
-      </div>
-
       <!-- Submit Button -->
       <div class="text-center">
         <button
@@ -126,13 +68,9 @@ export default {
   data() {
     return {
       formData: {
-        firstName: "",
-        middleName: "",
-        lastName: "",
-        username: "",
+        email: "",
         password: "",
         confirmPassword: "",
-        gender: "",
       },
     };
   },
@@ -141,13 +79,9 @@ export default {
       console.log("Form submitted:", this.formData);
       // Reset form data after submission
       this.formData = {
-        firstName: "",
-        middleName: "",
-        lastName: "",
-        username: "",
+        email: "",
         password: "",
         confirmPassword: "",
-        gender: "",
       };
     },
   },
