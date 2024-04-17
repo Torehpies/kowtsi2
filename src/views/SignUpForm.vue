@@ -28,7 +28,7 @@ body {
   overflow: hidden;
 }
 
-.login {
+.signIn {
   display: flex;
   flex-direction: column; /* Stack items vertically */
   align-items: center; /* Center items horizontally */

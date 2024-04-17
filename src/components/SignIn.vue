@@ -1,6 +1,6 @@
 <template>
   <div class="bg-container p-8 rounded shadow-md w-full sm:w-96 font-sans">
-    <h2 class="text-2xl font-bold mb-4 text-center">Register</h2>
+    <h2 class="text-2xl font-bold mb-4 text-center">Log In</h2>
 
     <form @submit.prevent="submitForm">
       <!-- Username -->
@@ -39,7 +39,7 @@
           type="submit"
           class="bg-black hover:bg-gray-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
         >
-          Register
+          Log In
         </button>
       </div>
     </form>
