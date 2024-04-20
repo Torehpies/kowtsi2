@@ -6,7 +6,7 @@
       <!-- Email -->
       <div class="mb-4">
         <label for="email" class="block text-sm font-medium text-white"
-          >email</label
+          >Email</label
         >
         <input
           v-model="formData.email"
@@ -64,25 +64,24 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   data() {
     return {
       formData: {
-        email: "",
-        password: "",
-        confirmPassword: "",
+        email: '', 
+        password: '',
       },
     };
   },
   methods: {
-    submitForm() {
-      console.log("Form submitted:", this.formData);
-      // Reset form data after submission
-      this.formData = {
-        email: "",
-        password: "",
-        confirmPassword: "",
-      };
+    async submitForm() {
+      try {
+        const response = await axios.post('http://localhost:5000/register', this.formData);
+        console.log('Account created');
+      } catch (error) {
+        console.error(error);
+      }
     },
   },
 };
