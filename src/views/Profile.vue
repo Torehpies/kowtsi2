@@ -1,4 +1,5 @@
 <template>
+
   <div>
     <img
       :src="user.photoURL"
@@ -33,3 +34,4 @@ const handleSignOut = async () => {
   }
 };
 </script>
+
