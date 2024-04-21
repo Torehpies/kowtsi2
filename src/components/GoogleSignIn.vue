@@ -1,3 +1,5 @@
+<!-- GoogleSignIn.vue -->
+
 <template>
   <div
     class="flex items-center justify-center bg-container p-8 rounded shadow-md w-full sm:w-96 font-sans"
@@ -18,20 +20,23 @@
   </div>
 </template>
 
+// GoogleSignIn.vue
+
 <script setup>
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import auth from "../firebaseConfig"; // Import the Firebase authentication instance
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { useRouter } from "vue-router";
+
+const auth = getAuth();
+const router = useRouter();
 
 const signInWithGoogle = async () => {
   const provider = new GoogleAuthProvider();
   try {
     const result = await signInWithPopup(auth, provider);
     const user = result.user;
-    console.log(user);
-    // Handle successful sign-in
+    router.push({ name: "Profile" });
   } catch (error) {
-    console.error(error.message);
-    // Handle sign-in error
+    console.error("Error signing in with Google:", error.message);
   }
 };
 </script>

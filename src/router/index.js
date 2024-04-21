@@ -1,39 +1,37 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "@/views/Home.vue";
 import Login from "@/views/Login.vue";
-import Index from "@/views/Index.vue";
 import Profile from "@/views/Profile.vue";
 import SignUpForm from "@/views/SignUpForm.vue";
+import { getAuth } from "firebase/auth";
+
+const auth = getAuth();
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes: [
-    {
-      path: "/",
-      name: "Kowtsi",
-      component: () => import("@/views/Index.vue"),
-    },
-    {
-      path: "/home",
-      name: "Kowtsi | Home",
-      component: () => import("../views/Home.vue"),
-    },
-    {
-      path: "/login",
-      name: "Kowtsi | Login",
-      component: () => import("../views/Login.vue"),
-    },
+    { path: "/", name: "Home", component: Home },
+    { path: "/login", name: "Login", component: Login },
     {
       path: "/profile",
-      name: "Kowtsi | Profile",
-      component: () => import("../views/Profile.vue"),
+      name: "Profile",
+      component: Profile,
+      meta: { requiresAuth: true },
     },
-    {
-      path: "/signIn",
-      name: "Kowtsi | SignUp",
-      component: () => import("../views/SignUpForm.vue"),
-    },
+    { path: "/signup", name: "SignUpForm", component: SignUpForm },
   ],
+});
+
+// Navigation guard to protect routes that require authentication
+router.beforeEach((to, from, next) => {
+  const requiresAuth = to.matched.some((record) => record.meta.requiresAuth);
+
+  // Check if the route requires authentication and the user is not authenticated
+  if (requiresAuth && !auth.currentUser) {
+    next("/login"); // Redirect to the login page
+  } else {
+    next(); // Allow access to the route
+  }
 });
 
 export default router;
