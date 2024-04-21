@@ -5,6 +5,7 @@
       <router-link to="/home">Home</router-link> -->
       <SignIn class="sign-up" style="z-index: 2" />
       <Wave class="wave" style="z-index: 1" />
+      <GoogleSignIn />
     </div>
   </body>
 </template>
@@ -13,6 +14,7 @@
 import { ref } from "vue";
 import SignIn from "../components/SignIn.vue";
 import Wave from "../components/Wave.vue";
+import GoogleSignIn from "../components/GoogleSignIn.vue";
 </script>
 
 <style scoped>
